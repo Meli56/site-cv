@@ -1,0 +1,46 @@
+body {
+  background-color:rgb(73,73,197);
+  text-align: center;
+  color:rgb(255,255,255);
+  font-weight: bold;
+  font-size:20pt;
+}
+
+iframe {
+  border-style: double;
+  border-radius:10px;
+  border-color:rgb(41,41,129);
+}
+
+
+h1 {
+	background-color:rgb(41,41,129);
+	padding: 2px;
+	border-radius: 50px;
+	border-color: rgb(41,41,129);
+	border-style: solid;
+	color: white;
+	font-size:38pt;
+	
+}
+h2 {
+	
+	color: white;
+	font-size:28pt;
+	text-align:center;
+	text-decoration:underline;
+	
+}
+h3 {
+	background-color: rgb(255, 255, 255);
+	padding: 0px;
+	color: black;
+	font-size:13pt;
+	margin-left : 220px;
+	
+}
+h4 {
+
+	color: black;
+	font-size:13pt;
+	

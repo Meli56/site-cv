@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html long= "fr">
+<form action= "test3.php" method= "GET">
+<html>
+<head>
+    <title>Sport track</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<body>
+<form>
+<h1>Charger un fichier</h1>
+	<label for="myfile">Choisir un fichier:</label>
+  	<input type="file" id="myfile" name="myfile">
+</form>
+</body>
+</html>

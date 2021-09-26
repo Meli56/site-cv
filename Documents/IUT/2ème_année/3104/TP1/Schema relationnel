@@ -1,0 +1,16 @@
+Schéma relationnel:
+Personne(email (1) NN UQ, prenom NN, nom NN, dateNaissance NN, sexe NN, taille NN, poids NN, passsword NN)
+Activite(idActivite (1), desscription NN, date NN, heureDebut NN, heureFin NN, duree NN, distanceParcourue, cardiaqueMin NN, cardiaqueMax NN, cardiaqueMoy NN, personne=email@Personne)
+Donnee(idDonnee (1) latitude NN, longitude NN, altitude NN, uneACtivite=idActivite@Activite)
+
+
+Contraintes textuelles:
+- chaque attribut doit être renseigné --> NOT NULL X
+- Vérifier que la personne est bien né avant la daate de l'activité 
+- Vérifier que l'heure de debut est bien inférieur à l'heure de fin
+- Le mot de passe est d'au monis 8 caractères --> CHECK X
+- L'email est bien valide --> CHECK X
+- Le sexe est bien "HOMME", "FEMME" ou "AUTRE" --> CHECK X
+- La frequence cardiaque maximum = 220 - age
+
+

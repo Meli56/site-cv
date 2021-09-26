@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html long= "fr">
+<form action= "test.php" method= "POST">
+<html>
+<head>
+    <title>Sport track</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<body>
+
+<h1>Bienvenue sur Sport Track &#127939;</h1>
+
+<p><b>Création d'un nouvel utilisateur<p>
+
+<form action="/action_page.php">
+  <label for="fname">Prenom:</label><br>
+  <input type="text" id="fname" name="fname" value="exemple : Nins"><br><br>
+  
+  <label for="lname">Nom:</label><br>
+  <input type="text" id="lname" name="lname" value="exemple : Meli"><br><br>
+  
+  <label for="fname">Date de naissance:</label><br>
+  <input type="date"><br><br>
+  
+  <label for="fname">Sexe:</label><br>
+  <input type="radio" id="Homme" name="fav_sexe" value="Homme">
+  <label for="Homme">Homme</label><br>
+  <input type="radio" id="Femme" name="fav_sexe" value="Femme">
+  <label for="Femme">Femme</label><br>
+  <input type="radio" id="Autre" name="fav_sexe" value="Autre">
+  <label for="Autre">Autre</label><br><br>
+  
+  <label for="taille">Taille (cm):</label><br>
+  <input type="number" id="taille"><br><br>
+  
+  <label for="poids">Poids (kg):</label><br>
+  <input type="number" id="poids" step="0.1"><br><br>
+  
+  <label for="mail">Mail:</label><br>
+  <input type="email" id="email"><br><br>
+  
+  <label for="password">Mot de passe:</label><br>
+  <input type="password" id="password" minlength="8"><br>
+  
+  <br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>

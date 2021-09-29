@@ -1,0 +1,3 @@
+User ( mail(1), name(NN), surname(NN), birthDate(NN), gender(NN), heigth(NN), weight(NN), password(NN) );
+Activity ( idActivity(1), dateActivity(NN), description(NN), start, duration, distance, maxFrequency, minFrequency, averageFrequency, athlete=@User.mail);
+Data (idData(1), time(NN), cardioFrequency(NN), latitude(NN), longitude(NN), altitude(NN), theActivity=@Activity.idActivity);

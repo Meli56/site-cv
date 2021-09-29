@@ -1,0 +1,456 @@
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form.update{
+    margin-top:60px
+}
+label{
+    margin-top:-6px;
+}
+
+.genderDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.genderDiv div{
+    text-align: left;
+}
+
+#header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+    font-size: 25px;
+}
+
+html {
+    background: #000;
+    color: #fff;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color:unset;
+}
+.return{
+    position:absolute;
+    left :3%;
+    top:3%;
+    font-size: 50px;
+    background: none;
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+}
+/************************************************************
+***** Cyber Punk Buttons
+************************************************************/
+
+
+@font-face {
+    font-family: Cyber;
+    src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+    font-display: swap;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Cyber', sans-serif;
+}
+
+body .cybr-btn + .cybr-btn {
+    margin-top: 2rem;
+}
+
+.cybr-btn {
+    --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
+    --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
+    --primary-hue: 0;
+    --primary-lightness: 50;
+    --color: hsl(0, 0%, 100%);
+    --font-size: 26px;
+    --shadow-primary-hue: 180;
+    --label-size: 9px;
+    --shadow-secondary-hue: 60;
+    --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
+    --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
+    --border: 4px;
+    --shimmy-distance: 5;
+    --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
+    --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
+    --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
+    --clip-four: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+    --clip-five: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+    --clip-six: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
+    --clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
+    font-family: 'Cyber', sans-serif;
+    color: var(--color);
+    cursor: pointer;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: var(--font-size);
+    outline: transparent;
+    letter-spacing: 2px;
+    position: relative;
+    font-weight: 700;
+    border: 0;
+    min-width: 300px;
+    height: 75px;
+    line-height: 75px;
+    transition: background 0.2s;
+}
+
+.cybr-btn:hover {
+    --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
+}
+.cybr-btn:active {
+    --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.6%));
+}
+
+.cybr-btn:after,
+.cybr-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: var(--clip);
+    z-index: -1;
+}
+
+.cybr-btn:before {
+    background: var(--shadow-primary);
+    transform: translate(var(--border), 0);
+}
+
+.cybr-btn:after {
+    background: var(--primary);
+}
+
+.cybr-btn__tag {
+    position: absolute;
+    padding: 1px 4px;
+    letter-spacing: 1px;
+    line-height: 1;
+    bottom: -5%;
+    right: 5%;
+    font-weight: normal;
+    color: #fff;
+    font-size: var(--label-size);
+}
+
+.cybr-btn__glitch {
+    position: absolute;
+    top: calc(var(--border) * -1);
+    left: calc(var(--border) * -1);
+    right: calc(var(--border) * -1);
+    bottom: calc(var(--border) * -1);
+    background: var(--shadow-primary);
+    text-shadow: 2px 2px var(--shadow-primary), -2px -2px var(--shadow-secondary);
+    clip-path: var(--clip);
+    animation: glitch 2s infinite;
+    display: none;
+}
+
+.cybr-btn:hover .cybr-btn__glitch {
+    display: block;
+}
+
+.cybr-btn__glitch:before {
+    content: '';
+    position: absolute;
+    top: calc(var(--border) * 1);
+    right: calc(var(--border) * 1);
+    bottom: calc(var(--border) * 1);
+    left: calc(var(--border) * 1);
+    clip-path: var(--clip);
+    background: var(--primary);
+    z-index: -1;
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--clip-one);
+    }
+    2%, 8% {
+        clip-path: var(--clip-two);
+        transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+    }
+    6% {
+        clip-path: var(--clip-two);
+        transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    9% {
+        clip-path: var(--clip-two);
+        transform: translate(0, 0);
+    }
+    10% {
+        clip-path: var(--clip-three);
+        transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    13% {
+        clip-path: var(--clip-three);
+        transform: translate(0, 0);
+    }
+    14%, 21% {
+        clip-path: var(--clip-four);
+        transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    25% {
+        clip-path: var(--clip-five);
+        transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    30% {
+        clip-path: var(--clip-five);
+        transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+    }
+    35%, 45% {
+        clip-path: var(--clip-six);
+        transform: translate(calc(var(--shimmy-distance) * -1%));
+    }
+    40% {
+        clip-path: var(--clip-six);
+        transform: translate(calc(var(--shimmy-distance) * 1%));
+    }
+    50% {
+        clip-path: var(--clip-six);
+        transform: translate(0, 0);
+    }
+    55% {
+        clip-path: var(--clip-seven);
+        transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    60% {
+        clip-path: var(--clip-seven);
+        transform: translate(0, 0);
+    }
+    31%, 61%, 100% {
+        clip-path: var(--clip-four);
+    }
+}
+
+.cybr-btn:nth-of-type(2) {
+    --primary-hue: 260;
+}
+
+/******************************************************
+************* The form
+******************************************************/
+
+.container {
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px; }
+
+.editor-field {
+    height: 64px;
+    position: relative;
+    margin: 14px 0; }
+.editor-field .noise__el {
+    fill: #70719C; }
+.editor-field__noise {
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: calc(100% + 2px);
+    z-index: 2;
+    pointer-events: none; }
+.editor-field__container {
+    clip-path: polygon(0% 0%, calc(100% - 8px) 0, 100% 8px, 100% 100%, 95% 100%, calc(0% + 8px) 100%, 0% calc(100% - 8px), 0% calc(100% + 8px));
+    border: 2px solid #5E5F84;
+    width: 100%;
+    height: 48px;
+    position: absolute;
+    bottom: 2px; }
+.editor-field__container:before, .editor-field__container:after {
+    content: "";
+    height: 2px;
+    width: 11.5px;
+    background: #5E5F84;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-radius: 5px; }
+.editor-field__container:before {
+    right: -3.1px;
+    top: 1.6px; }
+.editor-field__container:after {
+    left: -3.1px;
+    bottom: 1.6px; }
+.editor-field__bottom {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 30%;
+    background: #5E5F84;
+    right: 0px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, calc(0% + 2px) 100%);
+    bottom: 0px; }
+.editor-field__label-container {
+    position: absolute;
+    top: 0px; }
+.editor-field__label-container:after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 32px;
+    background: #5E5F84;
+    right: -29px;
+    -webkit-clip-path: polygon(0 0, calc(100% - 2px) 0%, 100% 100%, 22% 100%);
+    clip-path: polygon(0 0, calc(100% - 2px) 0%, 100% 100%, 0% 100%);
+    bottom: 2px; }
+.editor-field__label {
+    position: relative;
+    display: block;
+    height: 16px;
+    width: auto;
+    background: #5E5F84;
+    left: 0px;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    font-weight: 600;
+    padding: 0 24px 0 16px;
+    display: flex;
+    align-items: center;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0% 100%); }
+.editor-field__input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #0F1020;
+    color: #B3B5D2;
+    padding: 8px 16px;
+    letter-spacing: 0.2px; }
+.editor-field__input:focus {
+    animation: 0.05s infinite alternate blink; }
+@keyframes blink {
+    from {
+        background: #0F1020; }
+    to {
+        background: #111223; } }
+.editor-field:hover .editor-field__bottom, .editor-field.is-focused .editor-field__bottom {
+    background: #70719C; }
+.editor-field:hover .editor-field__container, .editor-field.is-focused .editor-field__container {
+    border-color: #70719C; }
+.editor-field:hover .editor-field__container:after, .editor-field:hover .editor-field__container:before, .editor-field.is-focused .editor-field__container:after, .editor-field.is-focused .editor-field__container:before {
+    background: #70719C !important; }
+.editor-field:hover .editor-field__label-container:after, .editor-field.is-focused .editor-field__label-container:after {
+    background: #70719C; }
+.editor-field:hover .editor-field__label,
+.editor-field:hover .editor-field__helper, .editor-field.is-focused .editor-field__label,
+.editor-field.is-focused .editor-field__helper {
+    background: #70719C; }
+
+.btn {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    margin-top: 32px;
+    cursor: pointer; }
+.btn__noise {
+    position: absolute;
+    top: -28%;
+    height: 66px;
+    width: 100%;
+    pointer-events: none; }
+.btn--primary .btn__container {
+    background: #383CAB;
+    border-color: #5054c6;
+    display: flex;
+    align-items: center;
+    line-height: 10px;
+    pointer-events: none;
+    color: #dedff4; }
+.btn--primary .noise__el {
+    fill: #5054c6; }
+.btn--primary:hover .btn__container {
+    background: #34389f;
+    border-color: #494dc3; }
+.btn--primary:hover .btn__bottom {
+    background: #34389f;
+    border-color: #494dc3; }
+.btn--primary:active .btn__container {
+    background: #2e318c;
+    border-color: #3b3fb3;
+    color: #c3c5ec; }
+.btn--primary:active .btn__bottom {
+    background: #2e318c;
+    border-color: #3b3fb3; }
+.btn:before, .btn:after {
+    content: "";
+    height: 2px;
+    width: 11px;
+    background: #5054c6;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-radius: 2px;
+    border-radius: 2px; }
+.btn:before {
+    right: -1.07px;
+    top: 4px; }
+.btn:after {
+    left: -1.07px;
+    bottom: 6px; }
+.btn__bottom {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 50%;
+    background: #383CAB;
+    pointer-events: none;
+    right: 0px;
+    bottom: 0px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, calc(0% + 4px) 100%);
+    border-bottom: 2px solid #5054c6;
+    border-right: 2px solid #5054c6; }
+.btn__bottom:before {
+    content: "";
+    height: 2px;
+    width: 11px;
+    background: #5054c6;
+    display: block;
+    position: absolute;
+    left: -5px;
+    bottom: 2px;
+    z-index: 1;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+.btn__container {
+    height: 100%;
+    background: none;
+    border: none;
+    color: white;
+    padding: 0 24px;
+    height: 48px;
+    border: 2px solid;
+    clip-path: polygon(0% 0%, calc(100% - 8px) 0, 100% 8px, 100% 100%, 95% 100%, calc(0% + 8px) 100%, 0% calc(100% - 8px), 0% 20%); }
+
+/*# sourceMappingURL=styleScss.css.map */
+

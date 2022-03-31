@@ -1,0 +1,229 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.hero {
+
+  height: calc( ( var(--vh, 1vh) * 100) - 67px);
+  width: 100%;
+  margin-top: 67px;
+
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__section {
+
+    width: 100%;
+    max-width: 1130px;
+    min-height: 100%;
+    margin-left: 0px;
+
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 680px) {
+      flex-direction: row;
+    }
+
+  }
+
+  &__content-container {
+    flex-grow: 0;
+    flex-basis: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    color: black;
+    @include mixins.font("Inter", 500, 18px, 133%);
+    
+  }
+
+  &__subtitle {
+    color: #535050;
+    @include mixins.font("Inter", 300, 1.75rem, 100%);
+
+    @media screen and (min-width: 680px){
+      font-size: 2.25rem;
+    }
+  }
+
+  &__imgR{
+    flex-grow: 0;
+    flex-basis: 100%;
+
+    display: flex;
+    margin-left: 0px;
+    margin-top: 35px;
+    align-items: left;
+    color: #535050;
+
+    @media screen and (min-width: 780px){
+      font-size: 1.5rem;
+    }
+
+    &--2{
+      margin-left: 50px;
+    }
+    
+  }
+
+  &__title {
+    @include mixins.font("Inter", 500, 2.5rem, 133%);
+    color: black;
+
+    @media screen and (min-width: 420px){
+      font-size: 3.5rem;
+    }
+
+    @media screen and (min-width: 530px){
+      font-size: 4.5rem;
+    }
+
+    @media screen and (min-width: 680px){
+      font-size: 2.5rem;
+    }
+
+    @media screen and (min-width: 840px){
+      font-size: 3.5rem;
+    }
+
+    @media screen and (min-width: 1060px){
+      font-size: 4.5rem;
+    }
+  }
+
+  &__description {
+    @include mixins.font("Inter", 400, .85rem, 100%);
+    color: #393838;
+
+    @media screen and (min-width: 680px){
+      font-size: 1rem;
+    }
+  }
+
+  &__img-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+
+  &__img {
+    //background-color: red;
+    flex: 1;
+
+    background-image: url("/public/img/meli.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+
+    @media screen and (min-width: 680px) {
+      background-position: center center;
+    }
+  }
+
+  &__img-exp {
+    
+    flex: 1;
+
+    background-image: url("/public/img/experience.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+
+    @media screen and (min-width: 680px) {
+      background-position: center center;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    & > a {
+      @include mixins.font("Inter", 500, 1rem, 100%);
+      color: white;
+
+      width: 100%;
+      max-width: 180px;
+
+      text-align: center;
+
+      padding: .7rem .5rem;
+      border-radius: 20px;
+    }
+
+    @media screen and (min-width: 680px) {
+      margin-top: 2.5rem;
+
+      & > a {
+        padding: 1rem .5rem;
+      }
+    }
+  }
+
+  &__resume-btn {
+    background: variables.$curious-blue;
+    
+    &:hover {
+      background: #636363;
+    }
+  }
+
+  &__contact-btn {
+    background-color: variables.$secondary-color;
+    &:hover {
+      background: #585858;
+    }
+  }
+
+
+  &__formular-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    
+    
+
+  }
+
+  &__formular {
+    border-color: #289CC9;
+    border-radius: 5px;
+    display: flex;
+		flex-direction: row;
+		margin-bottom: 1.25rem;
+    padding: 12px;
+    width: 100%;
+    resize: vertical;
+    font-size: 16px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+		&--2 {
+			justify-content: space-between;
+      padding: 12px;
+      width: 100%;
+      border-color: #289CC9;
+      border-radius: 5px;
+			& > *:first-child {
+				margin-right: .25rem;
+
+			}
+		}
+
+  }
+}

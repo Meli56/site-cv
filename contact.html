@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amélie Bodiou</title>
+    <link rel="icon" href="./public/img/logos/logo.png" />
+
+    <link rel="stylesheet" href="./dist/css/styles.css">
+
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a class="navbar__logo" href="/">
+            <img src="./public/img/logos/logov3.jpg" alt="logo" id="navbarLogo" />
+        </a>
+        <ul class="navbar__menu">
+            <a href="/" class="navbar__menu-item">
+                <span>Home</span>
+            </a>
+            <a href="career.html" class="navbar__menu-item">
+                <span>My career path</span>
+            </a>
+            <a href="project.html" class="navbar__menu-item">
+                <span>My projects</span>
+            </a>
+
+            <a href="contact.html" class="navbar__menu-item navbar__menu-item--active">
+                <span>Contact me</span>
+            </a>
+        </ul>
+
+
+        <input id="burger-menu" class="burger-menu__input" type="checkbox" >
+        <label for="burger-menu" class="navbar__burger burger-menu">
+            <span class="burger-menu__top-span"></span>
+            <span class="burger-menu__bottom-span"></span>
+        </label>
+    </nav>
+
+    <div class="mobile-nav mobile-nav--hidden">
+        <ul class="mobile-nav__menu">
+            <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="/"><span>Home</span></a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="career.html">My career path</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="project.html">My projects</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="contact.html">Contact me</a>
+            </li>
+        </ul>
+    </div>
+
+</header>
+
+<div class="hero">
+
+    <div class="hero__section">
+
+        <div class="hero__content-container">
+
+            <div class="hero__content">
+                <div class="hero__text">
+                    <h3 class="hero__subtitle">Entrez vos coordonnées</h3>
+                    <h1 class="hero__title">Contact me</h1>
+                    <p class="hero__description"> </p>
+
+                    <div class="hero__buttons">
+                        <a class="hero__resume-btn" href="./public/img/CV_Bodiou_Amelie.pdf" download>DL Resume</a>
+                        <a class="hero__contact-btn" href="contact.html">Contact me</a>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+        
+        
+            
+        <!-- Section d'inputs -->
+        <div class="hero__section hero__formular-container" >
+            
+            <div class="hero__formular hero__formular--2">
+                <input type="text" class="hero__formular--2" placeholder="First name*">
+                <input type="text" class="hero__formular--2" placeholder="Last name*">
+            </div>
+            
+            <div class="hero__formular">
+                <input type="text" class="hero__formular" placeholder="E-mail*">
+            </div>
+
+            <div class="hero__formular">
+                <textarea class="hero__formular" placeholder="Your messsage" rows="2" ></textarea>
+            </div>
+        </div>
+        
+          
+       
+
+    </div>
+
+</div>
+
+<main></main>
+
+<div id="menu-overlay" class="overlay--menu-hidden"></div>
+
+<script type="text/javascript" src="./src/js/lib/auto_width.js"></script>
+<script type="text/javascript" src="./src/js/lib/navbar.js"></script>
+
+</body>
+</html>

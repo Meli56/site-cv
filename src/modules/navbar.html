@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar__logo" href="/">
+                <img src="/newhome/img/logos/line-white-wide-logo.svg" alt="Wiseband logo" id="navbarLogo" />
+            </a>
+            <ul class="navbar__menu">
+                <a href="/" class="navbar__menu-item navbar__menu-item--active">
+                    <span>Accueil</span>
+                </a>
+                <a href="/distribution-digitale" class="navbar__menu-item">
+                    <span>Distribution digitale</span>
+                </a>
+                <a href="/nos-offres-musique" class="navbar__menu-item">
+                    <span>Nos offres</span>
+                </a>
+                <li class="navbar__menu-item menu--dropdown" tabindex="0">
+                    <span>Services</span>
+                    <img class="navbar__chevron--service" src="/newhome/img/icons/arrows/chevron-down.svg" width="16" height="16" alt="chevron blanc vers le bas" id="whiteChevron" />
+                    <div class="navbar__dropdown">
+                        <div class="navbar__dropdown-menu navbar__dropdown-menu--service">
+                            <a href="/promotion-musique" class="navbar__dropdown-item">Promotion</a>
+                            <a href="/merchandising-musique" class="navbar__dropdown-item">Merchandising</a>
+                            <a href="/boutiques-musique" class="navbar__dropdown-item">Boutique</a>
+                        </div>
+                    </div>
+                </li>
+                <a href="/blog/" target="_blank" class="navbar__menu-item">
+                    <span>Blog</span>
+                </a>
+            </ul>
+            <div class="navbar__buttons">
+                <a class="btn btn--small btn--dark btn--bordered-dark-nav" id="signInBtn" href="/admin/login.php?lang=fr">Connexion</a>
+                <a class="btn btn--small btn--bordered" id="signUpBtn" href="/admin/register.php?lang=fr">S'inscrire</a>
+                <div class="lang menu--dropdown menu--lang" tabindex="0">
+                    <img src="/newhome/img/flags/FR.svg" width="20" height="15" alt="drapeau français" />
+                    <div class="navbar__dropdown navbar__dropdown--flag">
+                        <div class="navbar__dropdown-menu navbar__dropdown-menu--flag">
+                            <a class="lang navbar__dropdown-item--flag" href="https://www.wiseband.com">
+                                <img src="/newhome/img/flags/US.svg" width="20" height="15" alt="drapeau américain" />
+                            </a>
+                            <a class="lang navbar__dropdown-item--flag" href="https://www.wiseband.es">
+                                <img src="/newhome/img/flags/ES.svg" width="20" height="15" alt="drapeau espagnol" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input id="burger-menu" class="burger-menu__input" type="checkbox" >
+            <label for="burger-menu" class="navbar__burger burger-menu">
+                <span class="burger-menu__top-span"></span>
+                <span class="burger-menu__bottom-span"></span>
+            </label>
+        </nav>
+        <div class="mobile-nav mobile-nav--hidden">
+            <ul class="mobile-nav__menu">
+                <li class="mobile-nav__item">
+                    <a class="mobile-nav__link" href="/"><span>Accueil</span></a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a class="mobile-nav__link" href="/distribution-digitale">Distribution Digitale</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a class="mobile-nav__link" href="/nos-offres-musique">Nos Offres</a>
+                </li>
+                <li class="mobile-nav__item" id="service-toggler">
+                    <span class="mobile-nav__link">Services</span>
+                    <img class="mobile-nav__arrow" width="14" height="8" src="/newhome/img/icons/arrows/chevron-down-grey.svg" alt="chevron gris vers le bas" />
+                </li>
+                <ul class="mobile-nav__sub-menu mobile-nav__sub-menu--hidden" id="service-sub-menu">
+                    <li class="mobile-nav__sub-item">
+                        <a class="mobile-nav__link mobile-nav__link--grey" href="/promotion-musique">Promotion</a>
+                    </li>
+                    <li class="mobile-nav__sub-item">
+                        <a class="mobile-nav__link mobile-nav__link--grey" href="/merchandising-musique">Merchandising</a>
+                    </li>
+                    <li class="mobile-nav__sub-item">
+                        <a class="mobile-nav__link mobile-nav__link--grey" href="/boutiques-musique">Boutique</a>
+                    </li>
+                </ul>
+                <li class="mobile-nav__item">
+                    <a class="mobile-nav__link" href="/blog/">Blog</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a class="mobile-nav__link" href="/admin/login.php?lang=fr">Connexion</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a class="mobile-nav__link" href="/admin/register.php?lang=fr">Inscription</a>
+                </li>
+                <li class="mobile-nav__item mobile-nav__item--language" id="lang-toggler">
+                    <img class="mobile-nav__flag" width="24" height="18" src="/newhome/img/flags/FR.svg" alt="drapeau français" />
+                    <a class="mobile-nav__link" >Français</a>
+                    <img class="mobile-nav__arrow" width="14" height="8" src="/newhome/img/icons/arrows/chevron-down-grey.svg" alt="chevron gris vers le bas" />
+                </li>
+                <ul class="mobile-nav__sub-menu mobile-nav__sub-menu--hidden" id="lang-sub-menu">
+                    <li class="mobile-nav__sub-item">
+                        <img class="mobile-nav__flag" width="24" height="18" src="/newhome/img/flags/US.svg" alt="drapeau américain" />
+                        <a class="mobile-nav__link" href="https://www.wiseband.com">English</a>
+                    </li>
+                    <li class="mobile-nav__sub-item">
+                        <img class="mobile-nav__flag" width="24" height="18" src="/newhome/img/flags/ES.svg" alt="drapeau espagnol" />
+                        <a class="mobile-nav__link" href="https://www.wiseband.es">Español</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+
+    </header>
+
+</body>
+</html>

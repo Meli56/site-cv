@@ -1,0 +1,18 @@
+stages:
+     - build
+
+cache:
+    paths:
+        - .m2/repository
+    key: "$CI_JOB_NAME"
+
+build_job:
+    stage: build
+    script:
+        - ./mvnw compile
+          -Dhttps.protocols=TLSv1.2
+          -Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository
+          -Djava.awt.headless=true
+          --batch-mode --eroors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true
+
+image: openjdk:8-alpine 

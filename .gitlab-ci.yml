@@ -15,4 +15,4 @@ build_job:
           -Djava.awt.headless=true
           --batch-mode --eroors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true
 
-image: openjdk:8-alpine
+image: openjdk:8-alpine 

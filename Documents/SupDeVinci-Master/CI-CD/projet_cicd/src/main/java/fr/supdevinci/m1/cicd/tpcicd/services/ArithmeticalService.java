@@ -10,7 +10,7 @@ public class ArithmeticalService {
      * @param b param 2
      * @return
      */
-    public String concaString(Object a, Object b) {
+    public String concaString(Object a, Object b = null) {
         if (null == a) {
             return "";
         }
